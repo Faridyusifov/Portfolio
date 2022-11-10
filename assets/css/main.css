@@ -145,11 +145,22 @@ a{
 
 .header{
     padding: 40px 0;
-    background-color: #030E21;
+    /* background-color: #030E21;
     width: 100%;
     position: sticky;
     top: 0;
-    z-index: 999;
+    z-index: 999; */
+}
+.header::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 600px;
+    background: linear-gradient(180deg, rgba(47, 69, 188, 0.9) 0%, rgba(47, 188, 188, 0) 100%);
+    filter: blur(60px);
+    z-index: -1;
 }
 .header_content{
     display: flex;
@@ -261,8 +272,9 @@ a{
     background: rgba(9, 20, 39, 0.6);
     backdrop-filter: blur(4px);
     padding: 45px 0;
+    position: relative;
+    z-index: 99;
 }
-
 .client_content{
     display: flex;
     flex-wrap: wrap;
@@ -362,6 +374,20 @@ a{
 
 /* PORTFOLIO SECTION */
 
+.portfolios{
+    position: relative;
+}
+/* .portfolios::after{
+    content: " ";
+    width: 60%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(216.32deg, #8B3D4C 13.28%, rgba(79, 52, 159, 0) 101.61%);
+    filter: blur(60px);
+    z-index: -1;
+} */
 .portfolios_body{
     background: rgba(9, 20, 39, 0.6);
     backdrop-filter: blur(2px);
@@ -411,6 +437,18 @@ a{
 
 .comments{
     padding: 150px 0;
+    position: relative;
+}
+.comments::before{
+    content: " ";
+    width: 20%;
+    height: 720px;
+    position: absolute;
+    left: 0;
+    top: 20%;
+    background: #2F45BC;
+    filter: blur(60px);
+    z-index: -1;
 }
 .comments_content{
     position: relative;
